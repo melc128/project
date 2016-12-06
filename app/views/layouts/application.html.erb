@@ -3,12 +3,49 @@
   <head>
     <title>Project</title>
     <%= csrf_meta_tags %>
-
+    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class='container'>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="/" class="navbar-brand">KFM</a>
+        </div>
+        <div class="collapse navbar-collapse" id="main-nav-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/about">About</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div>
+    </nav>
+  
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
-  </body>
+  <div class="container-fluid text-center jumbotron">
+    <body>
+      <%= yield %>
+    </body>
+  </div>
+  
+  <div class ="container-fluid">
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <h2>Meet the fishermen</h2>
+      </div>
+      <div class="col-md-4 text-center">
+        <h2>How this works</h2>
+      </div>
+      <div class="col-md-4 text-center">
+        <h2>Contact Us</h2>
+      </div>
+    </div>
+  </div>
+  
+  
 </html>
