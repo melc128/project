@@ -3,6 +3,17 @@
   <head>
     <title>Project</title>
     <%= csrf_meta_tags %>
+    
+  
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+
+  <body>
+    
+    
     <nav class="navbar navbar-default navbar-static-top" role="navigation">
       <div class='container'>
         <div class="navbar-header">
@@ -17,35 +28,15 @@
         <div class="collapse navbar-collapse" id="main-nav-collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact Us</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div>
     </nav>
-  
-    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <div class="container-fluid text-center jumbotron">
-    <body>
-      <%= yield %>
-    </body>
-  </div>
-  
-  <div class ="container-fluid">
-    <div class="row">
-      <div class="col-md-4 text-center">
-        <h2>Meet the fishermen</h2>
-      </div>
-      <div class="col-md-4 text-center">
-        <h2>How this works</h2>
-      </div>
-      <div class="col-md-4 text-center">
-        <h2>Contact Us</h2>
-      </div>
-    </div>
-  </div>
-  
+    
+    
+    <%= yield %>
+    
+  </body>
   
 </html>
